@@ -1,8 +1,10 @@
 import cors from "cors";
 import express from "express";
 import "express-async-errors";
+import dotenv from "dotenv";
 import { errorHandlerMiddleware } from "./middlewares/errorHandlerMiddleware.js";
 import recommendationRouter from "./routers/recommendationRouter.js";
+dotenv.config()
 
 const app = express();
 app.use(cors());
